@@ -194,6 +194,12 @@ function rebuildTable() {
       }
     }
   }
+
+  document.getElementById("bestLevels").innerText = maxLevels[5];
+  document.getElementById("bestValue").innerText = maxValues[5].toFixed(2);
+  calculateBloodstoneHide();
+  calculateFractalEncryption();
+
   var rainbows = [];
   for (var i = 0; i < maxValues.length; i++)
   {
@@ -211,11 +217,6 @@ function rebuildTable() {
       tagsStuff[j].style.backgroundColor = "#" + rainbows[j - 1].colorAt(parseFloat(tagsStuff[j].innerText));
     }
   }
-
-  document.getElementById("bestLevels").innerText = maxLevels[5];
-  document.getElementById("bestValue").innerText = maxValues[5].toFixed(2);
-  calculateBloodstoneHide();
-  calculateFractalEncryption();
 }
 
 function calculateBloodstoneHide() {
